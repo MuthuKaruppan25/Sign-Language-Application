@@ -12,7 +12,7 @@ import 'package:meet/services/sdk_initializer.dart';
 
 var x="";
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen1 extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override

@@ -395,7 +395,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   }
 
   Future<void> _fetchAndSaveVideo() async {
-    final url = Uri.parse('http://192.168.137.107:8000/generate_video');
+    final url = Uri.parse('http://192.168.207.166:8000/generate_video');
 
     final response = await http.post(
       url,

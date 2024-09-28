@@ -1,15 +1,16 @@
 //Package imports
 import 'package:flutter/material.dart';
+import 'package:meet/camera.dart';
 
 //File imports
-import 'package:meet/screens/home_screen.dart';
+
 import 'package:meet/speech.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
-
-
-
-void main() {
-
+import 'package:camera/camera.dart';
+import 'package:meet/homeScreen.dart';
+List<CameraDescription>? cameras;
+void main() async{
+  cameras = await availableCameras();
   runApp(MyApp());
 }
 
@@ -32,7 +33,9 @@ class MyApp extends StatelessWidget {
                       (states) => Colors.blueAccent),
                   foregroundColor: MaterialStateColor.resolveWith(
                       (states) => Colors.white)))),
-      home: SpeechToTextScreen(),
+      // home: SpeechToTextScreen(),
+      // home: TakeVideoScreen(cameras : cameras),
+      home : Homescreen(cameras : cameras),
     );
   }
 }

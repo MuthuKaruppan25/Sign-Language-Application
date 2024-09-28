@@ -49,7 +49,6 @@ class _SpeechToTextScreenState extends State<SpeechToTextScreen> {
 
         });
       },
-
       // listenFor: Duration(minutes: 5),
     );
   }
@@ -59,7 +58,7 @@ class _SpeechToTextScreenState extends State<SpeechToTextScreen> {
   }
 
   Future<void> _sendTextToFastAPI(String text) async {
-    final url = Uri.parse('http://192.168.137.107:8000/generate_video');
+    final url = Uri.parse('http://192.168.6.166:8000/generate_video');
     final response = await http.post(
       url,
       headers: <String, String>{
